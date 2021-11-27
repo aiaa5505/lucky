@@ -1,0 +1,236 @@
+html,body{ margin:0; padding:0; color:#eee; font-size:14px; font-family:"Microsoft YaHei"; overflow:hidden; }
+input{ font-family:"Microsoft YaHei"; }
+a{ text-decoration:none; color:#eee; cursor:pointer; }
+a img{ cursor:pointer; }
+i{ font-style:normal; }
+ul,li{ margin:0; padding:0; list-style:none; }
+h1,h2,h3,h4,h5{ margin:0; padding:0; font-size:14px; }
+p{ margin:0; padding:0; }
+.linearText{ background:linear-gradient(180deg,#999999 5%,#EEEEEE,#EEEEEE); background-clip:text; color:transparent; -webkit-background-clip:text; }
+*{cursor:default;}
+
+h1{ display:block; font-size:42px; margin:50px auto 50px auto; text-align:center; }
+
+html{ overflow-y:scroll; }
+body{ background:#102131 url(img/bg.png); background-repeat:no-repeat; background-position:top center; }
+.container{ display:table; width:1350px; margin:auto; }
+
+@media(min-width:1023px){
+	.mdiv{ display:none!important; }
+}
+
+.nav{ display:table; margin:50px 0 20px 0; }
+.nav .logo{ float:left; font-size:26px; margin-left:50px; }
+.nav .logo span{ color:#42709c; }
+.nav .links{ float:left; font-size:18px; margin-left:120px; }
+.nav .links a{ float:left; margin-right:60px; margin-top:7px; font-weight:bold; }
+.nav .links a:hover{ color:#f4b204; }
+
+.firstDiv{ display:table;  }
+.firstDiv .side{ float:left; width:600px; }
+.firstDiv .side .curve{ width:580px; height:580px; background:url(img/curve.png); background-size:cover; margin:40px auto; } 
+/*.firstDiv .side*/ .qrDiv{ display:table; width:380px; background:#f4b204; border-radius:10px; padding:10px; color:#102131; margin:auto; }
+/*.firstDiv .side*/ .qrDiv{ box-shadow: 0px 4px 36px rgba(0,120,226,0.36); }
+/*.firstDiv .side*/ .qrDiv .qr{ float:left; width:90px; height:90px; background:url(img/qr.png); background-size:cover; border-radius:8px; margin-right:12px; }
+/*.firstDiv .side*/ .qrDiv .qr{ box-shadow: 0px 4px 16px rgba(0,120,226,0.36); }
+/*.firstDiv .side*/ .qrDiv .text strong{ display:block; font-size:18px; font-weight:normal; }
+/*.firstDiv .side*/ .qrDiv .text span{ display:block; font-size:12px; margin:7px 0 10px 0; }
+/*.firstDiv .side*/ .qrDiv .text button{ display:block; margin:auto; background:#102131; border-radius:5px; border:0; color:#fff; padding:7px 30px; cursor:pointer; }
+.firstDiv .content{ float:left; width:700px; margin-left:30px; }
+.firstDiv .content h3{ display:inline-block; font-size:32px; margin-bottom:0px; margin-top:20px; }
+.firstDiv .content h4{ display:inline-block; font-size:24px; margin-bottom:20px; margin-left:10px; }
+.firstDiv .content h5{ font-size:18px; margin-bottom:5px; margin-top:25px; color:#00c3ff; }
+.firstDiv .content p{ font-size:14px; margin-bottom:10px; line-height:1.5; }
+.firstDiv .content .case{ margin-top:20px; display:table; }
+.firstDiv .content .case li{ float:left; padding:15px; width:120px; height:180px; margin-right:20px; font-size:14px; margin-bottom:20px; }
+.firstDiv .content .case li{  border-radius:20px; background:#102131; box-shadow:0px 4px 36px rgba(0,120,226,0.36); }
+.firstDiv .content .case li:nth-last-child(){ margin-right:0; }
+.firstDiv .content .case li{ color:#ccc; text-align:center; }
+.firstDiv .content .case li span{ color:#f4b204; }
+.firstDiv .content .case li.lost span{ color:#00c3ff; }
+.firstDiv .content .case li .t1{ margin-bottom:5px; height:20px;  }
+.firstDiv .content .case li .t1 span{ float:left; display:table; background:rgba(61,122,180,0.1); padding:5px 15px; color:#fff; border-radius:20px 0 10px 0; margin:-15px; }
+.firstDiv .content .case li .t3{ font-size:18px; text-align:center; margin:5px 0;  }
+.firstDiv .content .case li .t5{ font-size:16px;text-align:center;  margin:5px 0;   }
+.firstDiv .content .case li .t7{ margin-top:6px;  }
+
+
+.ruleDiv{ display:table; width:100%; padding-bottom:50px; }
+.ruleDiv h1{ margin:150px auto 20px auto; }
+
+.ruleDiv{ display:table; width:100%; overflow:hidden; }
+.ruleDiv .nums{ display:none; }
+.ruleDiv .start{ padding:0 20px; font-size:18px; margin-top:50px; }
+.ruleDiv .start span{ font-size:16px; color:#f4b204; display:inline-block; margin-left:5px; line-height:16px; }
+.ruleDiv .blocks{  width:1350px; max-width:1350px; overflow:hidden; margin-bottom:50px;  }
+.ruleDiv .blocks ul{ display:table; width:1350px; }
+.ruleDiv .blocks ul li { float:left; margin-right:10px; cursor:default; }
+.ruleDiv .blocks ul li .title{ width:150px; height:160px; padding:10px; margin:20px; }
+.ruleDiv .blocks ul li .title{ background:#223b54; box-shadow: 0px 4px 36px rgba(0,120,226,0.36); border-radius:15px; }
+.ruleDiv .blocks ul li .title:nth-last-child(){ margin-right:0; }
+.ruleDiv .blocks ul li .title i{ display:block; color:#80bbf0; font-size:18px; margin:10px 0 0 15px; }
+.ruleDiv .blocks ul li .title span{ display:block; font-size:16px; margin:10px 0 0 15px; line-height:20px; height:45px; }
+.ruleDiv .blocks ul li .title em{ font-size:12px; color:#999; }
+.ruleDiv .blocks ul li .info{ display:none; opacity:0; display:block; position:absolute; width:170px; padding-top:20px;  }
+.ruleDiv .blocks ul li .info{ background:#5e7388; border-radius:15px; overflow:hidden; padding-bottom:15px; }
+.ruleDiv .blocks ul li .info{ margin:-150px 0 0 20px; box-shadow: 0px 4px 36px rgba(0,120,226,0.36); }
+.ruleDiv .blocks ul li .info .head{ font-size:18px; width:260px; margin:auto; padding:0 70px 15px 0px; }
+.ruleDiv .blocks ul li .info p{ font-size:14px; padding:5px 30px; line-height:1.5; }
+.ruleDiv .blocks ul li .info a label{ cursor:pointer; }
+.ruleDiv .blocks ul li .info a:hover{ color:#f4b204; }
+.ruleDiv .blocks ul li .info button{ display:block; background:#F4B204; border-radius:15px; border:0; color:#fff; padding:7px 30px; cursor:pointer; }
+.ruleDiv .blocks ul li .info button{ margin:0 auto 10px auto; font-weight:bold; font-size:16px;  }
+.ruleDiv .blocks ul li .info h4{ font-size:16px; padding:5px 30px; }
+.ruleDiv .blocks ul li .info span{ color:#edcc9e; }
+
+.ruleDiv .blocks ul li .title{ transition:all 0.5s; }
+.ruleDiv .blocks ul li .info{ transition:all 0.5s; }
+
+.ruleDiv .blocks ul li.show .title{ width:380px; background:#355676; }
+.ruleDiv .blocks ul li.show .info{ opacity:1; width:400px; height:auto; margin-top:-90px }
+
+
+.ruleDiv .tableDiv{ display:table; border-radius:15px; overflow:hidden; margin:10px auto; }
+.ruleDiv table{ border-collapse:collapse; border:0; width:350px; }
+.ruleDiv table th,table td{ border:0; background:#fff; padding:2px; text-align:left; text-align:center; }
+.ruleDiv table th{ border:0px solid #f5f5f5; color:#fff; background:linear-gradient(270deg,#223B54,#4E6276,#223B54); padding:6px 0; }
+.ruleDiv table tr{ border-bottom:1px dashed #76baf0; }
+.ruleDiv table td{ padding:1px 5px; color:#333; }
+.ruleDiv table td a{ color:#333; }
+.ruleDiv table td img{ height:30px; } 
+
+.whyContainer{ background:#102131 url(img/line1.png); background-repeat:repeat-x; margin-top:340px; }
+
+.whyDiv{ padding-bottom:50px; }
+.whyDiv h1{ margin:60px auto 30px auto; }
+.whyDiv .block{ float:left; width:300px; margin:20px 55px 20px 50px; border-radius:20px; padding:30px 20px; transition:all 0.5s; }
+.whyDiv .block:hover{ background: rgba(255,255,255,0.05); }
+.whyDiv .block i{ display:block; margin:20px auto; width:75px; height:75px; background:url(img/w1.png) no-repeat; background-size:100% 100%; }
+.whyDiv .block.b2 i{  background-image:url(img/w2.png); }
+.whyDiv .block.b3 i{  background-image:url(img/w3.png); }
+.whyDiv .block h4{ text-align:center; font-size:18px; margin:10px 0; }
+.whyDiv .block ul{ overflow:hidden; padding-left:20px; }
+.whyDiv .block ul li{ list-style:disc; color:#889098; }
+.whyDiv .block:nth-last-child(){ margin-right:0; }
+.whyDiv em{ display:none; color: #00c3ff; font-style:normal; margin:10px auto 10px auto; font-size:16px; cursor:pointer; }
+.whyDiv em:hover{ display:table; color: #00c3ff; font-style:normal; margin:10px auto 10px auto; font-size:16px; cursor:pointer; }
+
+.faqWhyContainer{ box-shadow: 0px 2px 90px rgba(0,0,0,1); border-radius:40px 40px 0 0; }
+.faqDiv h1{ text-align:left; margin:40px 120px 10px 120px; font-size:28px; }
+.faqDiv .list{ width:1100px; margin:auto; font-size:16px; margin-bottom:50px; line-height:1.5; } 
+.faqDiv .list a{ color:#F4B204; }  
+.faqDiv .list ul li{ color:#00c3ff; margin-top:40px; margin-bottom:10px; list-style:decimal-leading-zero; }  
+.faqDiv .list ul div{ padding-left:20px; background:url(img/icon2.png) no-repeat; background-position:0 7px; margin-left:-20px; margin-bottom:10px; } 
+.faqDiv .list ul div.iconDiv{ display:table; width:100%; background:none; margin-top:20px; }
+.faqDiv .list ul div.onIcon{ background:none; }
+.faqDiv .list ul div.emial{ display:block; padding-left:30px;  }
+.faqDiv .list ul div.emial{ background:url(img/icon5.png) no-repeat; background-size:16px 14px; background-position:3px 4px; margin:20px 0 0 20px;  }
+.faqDiv .list ul div.iconDiv a{ float:left; width:150px; height:50px; padding-top:70px; text-align:center; color:#fff; }
+.faqDiv .list ul div.iconDiv a{ background:url(img/icon3.png) no-repeat; background-size:50px 50px; background-position:center 10px;  }
+.faqDiv .list ul div .tg{ background-image:url(img/icon3.png);  }
+.faqDiv .list ul div .fb{ background-image:url(img/icon4.png);  }
+
+
+@media(max-width:1023px){
+
+	html,body{ font-size:4vw; width:100vw; }
+	.pdiv{ display:none!important; }
+	h1{ display:block; width:100vw; font-size:6vw; margin:5vw auto 5vw auto; }
+
+	body{ background-image:url(img/bg_mobile.png); }
+
+	.container{ width:100vw; overflow:hidden; }
+
+	.nav{ margin:0 0 20px 0; }
+	.nav .logo{ display:block; font-size:5vw; margin-left:5vw; margin-top:5vw; }
+	.nav .logo span{ color:#42709c; }
+	.nav .links{ float:left; font-size:3.6vw; margin-left:5vw; }
+	.nav .links a{ float:left; margin-right:4vw; margin-top:2vw; }
+
+	.firstDiv .side{ width:90vw; }
+	.firstDiv .side .curve{ width:90vw; height:90vw; background:url(img/curve.png); background-size:cover; margin:0 auto 0 5vw; } 
+	.firstDiv .side .qrDiv{ display:none; }
+	.firstDiv .content{ float:left; width:90vw; margin-left:5vw; text-align:justify; }
+	.firstDiv .content h3{ display:inline-block; font-size:6vw; margin-bottom:4vw; margin-top:4vw; }
+	.firstDiv .content h4{ display:inline-block; font-size:5vw; margin-bottom:4vw; }
+	.firstDiv .content h5{ font-size:4vw; margin-bottom:5px; margin-top:4vw; }
+	.firstDiv .content p{ font-size:3.5vw; margin-bottom:20px; line-height:1.3; }
+
+	.qrDiv{ width:86vw; border-radius:3vw; padding:2vw; margin:4vw 0 0 5vw; }
+	.qrDiv .qr{ float:none; display:table; width:35vw; height:35vw; border-radius:3vw; margin:3vw auto; }
+	.qrDiv .text{ text-align:center; }
+	.qrDiv .text strong{ font-size:5vw; }
+	.qrDiv .text span{ font-size:3.6vw; }
+	.qrDiv .text button{ border-radius:3vw; padding:3vw 10vw; font-size:3.5vw; margin:3vw auto; }
+
+
+	.ruleDiv{  width:90vw; padding-bottom:0; }
+
+	.ruleDiv{ display:table; width:100%; overflow:hidden; }
+	.ruleDiv h1{ margin:5vw auto 5vw auto; }
+
+	.ruleDiv .nums{ display:table; margin-left:5vw; margin:auto; }
+	.ruleDiv .nums span{ float:left; font-size:4vw; padding:2vw 3vw; background:rgba(255,255,255,0.5); margin-right:3vw; border-radius:2vw; }
+	.ruleDiv .nums span.cur{ background:#f4b204; color:#333; }
+	.ruleDiv .start{ display:none; }
+	.ruleDiv .blocks{  width:100vw; padding-bottom:0; margin-bottom:0;  }
+	.ruleDiv .blocks ul{ display:table; width:400vw; transition:all 0.5s; }
+	.ruleDiv .blocks ul li { float:left;  margin-bottom: 10vw; }
+	.ruleDiv .blocks ul li .title{ width:50vw; height:30vw; padding:5vw; margin:5vw; }
+	.ruleDiv .blocks ul li .title{ background:#102131; border-radius:4vw; }
+	.ruleDiv .blocks ul li .title i{ font-size:5vw; margin:2vw 0 0 2vw; }
+	.ruleDiv .blocks ul li .title span{ font-size:4vw; margin:2vw 0 0 2vw; line-height:5vw; height:10vw; }
+	.ruleDiv .blocks ul li .title em{ font-size:3vw; color:#999; }
+	.ruleDiv .blocks ul li .info{ width:65vw; height:65vw; padding-top:5vw;  }
+	.ruleDiv .blocks ul li .info{ background:#404d5a; border-radius:4vw; padding-bottom:4vw; position:inherit; }
+	.ruleDiv .blocks ul li .info{ margin:-15vw 0 0 5vw; }
+	.ruleDiv .blocks ul li .info .head{ font-size:4.5vw; width:65vw; padding:0 15vw 4vw 0px; margin-bottom:2vw; }
+	.ruleDiv .blocks ul li .info .head{ background-position:70vw 4vw; }
+	.ruleDiv .blocks ul li .info p{ font-size:3.5vw; padding:5px 5vw; line-height:1.5; }
+	.ruleDiv .blocks ul li .info button{ border-radius:4vw;padding:2vw 5vw;  }
+	.ruleDiv .blocks ul li .info button{ margin:0 auto 3vw auto;font-size:4vw;  }
+	.ruleDiv .blocks ul li .info h4{ font-size:4vw; padding:2vw 5vw; }
+
+	.ruleDiv .blocks ul li .title{ transition:all 0.5s; }
+	.ruleDiv .blocks ul li .info{ transition:all 0.5s; }
+	.ruleDiv .blocks ul li.show .title{display:; width:80vw; background:#102131; }
+	.ruleDiv .blocks ul li.show .info{ display:; opacity:1; width:90vw; height:auto; margin-top:-15vw; }
+
+	.ruleDiv .tableDiv{  border-radius:3vw; margin:3vw auto; }
+	.ruleDiv table{  width:82vw; }
+	.ruleDiv table td img{ height:6vw; margin:1vw 0; } 
+
+
+	.whyContainer{ margin-top:0; background:none; }
+
+	.whyDiv{ padding-bottom:5vw; }
+	.whyDiv h1{ margin:0 0 5vw 0; }
+	.whyDiv .block{ width:80vw; margin:0 5vw; border-radius:5vw; padding:5vw 5vw; }
+	.whyDiv .block i{ margin:2vw auto; width:75px; height:75px; }
+	.whyDiv .block h4{ font-size:5vw; margin:4vw 0; }
+	.whyDiv .block ul{  padding-left:4vw; }
+	.whyDiv .block ul li{ font-size:3.5vw; }
+	.whyDiv .block:nth-last-child(){ margin-right:0; }
+	.whyDiv em{ margin:2vw auto 2vw auto; font-size:4vw;}
+
+	.faqWhyContainer{ margin-top:4vw; }
+
+	.faqDiv h1{ text-align:left; margin:8vw 0 5vw 8vw; font-size:5vw; }
+	.faqDiv .list{ width:90vw; margin:auto; font-size:3.5vw; margin-bottom:8vw; line-height:1.5; } 
+	.faqDiv .list ul li{ margin-top:6vw; margin-bottom:2vw;  }  
+	.faqDiv .list ul div{ padding-left:5vw; background-position:0 1vw; margin-left:-5vw; margin-bottom:2vw; text-align:justify; padding-right:5vw; } 
+	.faqDiv .list ul div.iconDiv{  margin-top:4vw; }
+	.faqDiv .list ul div.emial{ display:block; padding-left:8vw;  }
+
+	.firstDiv .content .case{ margin-top:5vw; }
+	.firstDiv .content .case li{ padding:2vw; width:38vw; height:50vw; margin-right:5vw; font-size:3vw; margin-bottom:4vw; border-radius:4vw; }
+	.firstDiv .content .case li:nth-child(even){ margin-right:0; }
+	.firstDiv .content .case li .t1{ margin-bottom:2vw; height:8vw;  }
+	.firstDiv .content .case li .t1 span{ padding:2vw 5vw; border-radius:4vw 0 2vw 0; margin:-2vw; background:rgba(61,122,180,0.2); }
+	.firstDiv .content .case li .t3{ font-size:18px; text-align:center; margin:2vw 0;  }
+	.firstDiv .content .case li .t5{ font-size:16px;text-align:center;  margin:2vw 0;   }
+	.firstDiv .content .case li .t7{ margin-top:6px;  }
+
+
+}
+

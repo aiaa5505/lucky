@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>幸运哈希</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" id="mainStyleSheet">
+	<link rel="shortcut icon" href="/favicon.png">
+	<link rel="stylesheet" href="css/animate.css" media="all">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/i18n.js"></script>
+
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script type="text/javascript" src="js/clipboard.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body>
+
+	<!--导航条-->
+	<div class="container wow fadeInDown">
+		<div class="nav">
+			<div class="logo">Luckhash<span>.me</span></div>
+			<div class="links">
+				<a class="linearText" data-lang="t1" href="#t1">游戏规则</a>
+				<a class="linearText" data-lang="t2" href="#t2">游戏步骤</a>
+				<a class="linearText" data-lang="t3" href="#t3">为什么选择哈希</a>
+				<a class="linearText" data-lang="t4" href="#t4">常见问题</a>
+			</div>
+		</div>
+	</div>
+
+	<!--第一屏-->
+	<a id="t1"></a>
+	<div class="container">
+		<div class="firstDiv wow fadeInLeft">
+			<div class="side">
+				<div class="curve"></div>
+				<div class="qrDiv pdiv">
+					<div class="qr"></div>
+					<div class="text">
+						<strong>TRX 及 USDT-TRC20地址：</strong>
+						<span>TQqDgU35UtALZ6nzVrHMYYrZRnHB5tuMAq</span>
+						<button data-clipboard-text="TQqDgU35UtALZ6nzVrHMYYrZRnHB5tuMAq" class="copyTrc20But">点击复制</button>
+					</div>
+				</div>
+			</div>
+			<div class="content wow fadeInUp">
+				<h3 data-lang="game" class="linearText">幸运哈希</h3>
+				<h4 data-lang="rule" class="linearText">—— 游戏规则</h4>
+				<p data-lang="remind">特别提醒: 必须使用【去中心化钱包】进行转账，否则您个人的钱包地址无法收到返奖</p>
+				<h5 data-lang="howplay">玩法</h5>
+				<p><span data-lang="howplay1">用您的去中心化钱包给幸运哈希平台地址转账</span><span style="color:#F4B204">&nbsp10-30000&nbsp</span><span data-lang="howplay2">个TRX或</span><span style="color:#F4B204">&nbsp1-3000&nbsp</span><span data-lang="howplay3">个USDT</span></p>
+				<h5 data-lang="tranrules">转账规则：</h5>
+				<p data-lang="tranrules1">幸运哈希仅返奖转账金额的整数部分，例如转账10.812中奖，将返奖您19.8</p>
+				<p data-lang="tranrules2">转账金额低于10TRX或低于1USDT无法返回本金和进行返奖；</p>
+				<p data-lang="tranrules3">转账金额超过30000TRX或超过3000USDT时不进行返奖，我们会扣除双倍手续费后将剩余转账金额返还至您的转账账户；</p>
+				<h5 data-lang="winrule">中奖规则</h5>
+				<p data-lang="winrule1">如果转账金额的【个位数】为【双数】（比如：0/2/4/6/8），转账后的区块哈希值（Block Hash）最后的数字（忽略字母）也是【双数】（比如：0/2/4/6/8），则视为中奖。</p>
+				<p data-lang="winrule2">如果转账金额的【个位数】为【单数】（比如：1/3/5/7/9），转账后的区块哈希值（Block Hash）最后的数字（忽略字母）也是【单数】（比如：1/3/5/7/9），则视为中奖。</p>
+				<h5 data-lang="award">中奖奖励</h5>
+				<p data-lang="award1">如获得中奖，系统将在10秒内对您进行1.98倍奖励，如您转账100返奖您198。</p>
+				<h5 data-lang="example">举例说明</h5>
+				<div class="case">
+					<ul>
+						<li>
+							<div data-lang="exa" class="t1"><span>例1</span></div>
+							<div data-lang="exa1" class="t2">您的转账金额为</div>
+							<div class="t3">28</div>
+							<div data-lang="exa2" class="t4">转账哈希值是</div>
+							<div class="t5">00****9e8d<span>4</span></div>
+							<div data-lang="exa3" class="t6">结果：中奖！</div>
+							<div data-lang="exa4" class="t7">系统返奖您&nbsp 55.44</div>
+						</li>
+						<li class="lost">
+							<div data-lang="exaa" class="t1"><span>例2</span></div>
+							<div data-lang="exa1" class="t2">您的转账金额为</div>
+							<div class="t3">16<span>6</span></div>
+							<div data-lang="exa2" class="t4">转账哈希值是</div>
+							<div class="t5">00****d<span>1</span>dae</div>
+							<div data-lang="exaa1" class="t6">结果：未中奖</div>
+							<div class="t7">----</div>
+						</li>
+						<li>
+							<div data-lang="exaaa" class="t1"><span>例3</span></div>
+							<div data-lang="exa1" class="t2">您的转账金额为</div>
+							<div class="t3">10<span>1</span></div>
+							<div data-lang="exa2" class="t4">转账哈希值是</div>
+							<div class="t5">00****9e<span>9</span>da</div>
+							<div data-lang="exa3" class="t6">结果：中奖！</div>
+							<div data-lang="exa4" class="t7">系统返奖您 <span>199.98</span></div>
+						</li>
+						<li class="lost">
+							<div data-lang="exaaaa" class="t1"><span>例4</span></div>
+							<div   data-lang="exa1" class="t2">您的转账金额为</div>
+							<div class="t3">5<span>7</span></div>
+							<div data-lang="exa2" class="t4">转账哈希值是</div>
+							<div class="t5">00****a<span>6</span>dcb</div>
+							<div data-lang="exaa1"  class="t6">结果：未中奖</div>
+							<div class="t7">----</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="qrDiv mdiv">
+		<div class="qr"></div>
+		<div class="text">
+			<strong data-lang="addr">TRX 及 USDT-TRC20地址：</strong>
+			<span>TQqDgU35UtALZ6nzVrHMYYrZRnHB5tuMAq</span>
+			<button data-lang="copy" data-clipboard-text="TQqDgU35UtALZ6nzVrHMYYrZRnHB5tuMAq" class="copyTrc20But">点击复制</button>
+		</div>
+	</div>
+
+	<!--游戏步骤-->
+	<a id="t2"></a>
+	<div class="container">
+		<div class="ruleDiv">
+			<h1 data-lang="t2" class="linearText wow fadeInUp">游戏步骤</h1>
+			<div class="nums">
+				<span data-num="1" class="cur">01</span>
+				<span data-num="2">02</span>
+				<span data-num="3">03</span>
+				<span data-num="4">04</span>
+				<span data-num="5">05</span>
+			</div>
+			<div data-lang="start" class="start">开始幸运哈希<span>▶</span></div>
+			<div class="blocks">
+				<ul>
+					<li class="show">
+						<div class="title">
+							<i>01</i>
+							<span>
+								<span data-lang="reg">注册数字币去中心化钱包</span>
+								<br/>
+								<em data-lang="skip">若您已拥有钱包，可跳过此步骤。</em>
+							</span>
+							</div>
+						<div class="info">
+							<div  class="head"><span data-lang="header">下载并注册一个数字币</span><br/><span data-lang="wallet">去中心化钱包</span></div>
+							<p data-lang="notice">注意：必须使用【去中心化钱包】进行转账，否则您个人的钱包地址无法返奖</p>
+							<p data-lang="Tutorials">数字币钱包相关网站及教程如下：</p>
+							<div class="tableDiv">
+								<table class="qianbaoTable">
+									<tr>
+										<th data-lang="p">平台</th>
+										<th data-lang="p1">网址</th>
+										<th data-lang="p2">教程</th>
+									</tr>
+									<tr style="border-bottom:0;">
+										<td><img src="images/xinglong.PNG"></td>
+										<td><a href="https://www.360usdt.com/" target="_blank">360usdt.com</a></td>
+										<td><a href="tutorials1.html" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td colspan="3" style="text-align:right;">
+											<span data-lang="sp" style="background:#eac104;color:#fff;float:right;margin-bottom:5px;margin-top:-2px;padding:2px 5px;border-radius:5px;">
+												电脑和苹果手机都可以使用
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td><img src="images/imtoken.png"></td>
+										<td><a href="https://token.im/download" target="_blank">token.im</a></td>
+										<td><a href="https://www.luckhash.vip/0028.html" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/ownbit.png"></td>
+										<td><a href="https://ownbit.io/en/download/" target="_blank">ownbit.io</a></td>
+										<td><a href="https://www.luckhash.vip/0017.html" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/atoken.png"></td>
+										<td><a href="https://www.atoken.com/" target="_blank">atoken.com</a></td>
+										<td><a href="https://www.luckhash.vip/0015.html" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/tronlink.png"></td>
+										<td><a href="https://www.tronlink.org/cn/" target="_blank">tronlink.org</a></td>
+										<td><a href="https://tron7010.zendesk.com/hc/en-us/articles/360027090691-How-to-download-TronLink-Chrome-and-create-wallet-" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/bitpie.png"></td>
+										<td><a href="https://bitpie.com/" target="_blank">bitpie.com</a></td>
+										<td><a href="https://www.luckhash.vip/0019.html" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv"  data-lang="p2">教程</label></a></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</li>
+					<li class="wow flipInX" data-wow-delay="0.3s">
+						<div class="title">
+							<i>02</i>
+							<span>
+								<span data-lang="tip">数字币交易所中购买USDT和TRX</span><br/>
+								<em data-lang="skip1">若您的钱包已有USDT和TRX，可跳过此步骤。</em>
+							</span>
+						</div>
+						<div class="info">
+							<p data-lang="tip1">在数字币交易所中购买USDT和TRX，然后将USDT和TRX转入您的【去中心化钱包】，您可以使用以下去中心化钱包网站注册的钱包：</p>
+							<div class="tableDiv">
+								<table class="qianbaoTable">
+									<tr>
+										<th data-lang="p">平台</th>
+										<th data-lang="p1">网址</th>
+										<th data-lang="p2">教程</th>
+									</tr>
+									<tr style="border-bottom:0;">
+										<td><img src="images/xinglong.PNG"></td>
+										<td><a href="https://www.360usdt.com/" target="_blank">360usdt.com</a></td>
+										<td><a href="tutorials1.html" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td colspan="3" style="text-align:right;">
+											<span data-lang="sp" style="background: #eac104;color:#fff;float:right;margin-bottom:5px;margin-top:-2px;padding:2px 5px;border-radius:5px;">
+												电脑和苹果手机都可以使用
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td><img src="images/gate.png"></td>
+										<td><a href="https://www.gate.io/cn " target="_blank">gate.io</a></td>
+										<td><a href="https://www.gate.io/cn/help/guide" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/huobi.png"></td>
+										<td><a href="https://www.huobi.com/zh-cn/" target="_blank">huobi.com</a></td>
+										<td><a href="https://www.huobi.com/support/zh-cn/list/360000010372" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label data-lang="p2" class="mdiv">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/binance.png"></td>
+										<td><a href="https://www.binance.com/zh-CN" target="_blank">binance.com</a></td>
+										<td><a href="https://academy.binance.com/zh/articles/binance-beginner-s-guide" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label data-lang="p2" class="mdiv">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/okex.png"></td>
+										<td><a href="https://www.okex.com/cn" target="_blank">okex.com</a></td>
+										<td><a href="https://www.okex.com/support/hc/zh-cn/sections/360000033031-%E6%96%B0%E6%89%8B%E5%BF%85%E8%AF%BB" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/zb.png"></td>
+										<td><a href="https://www.zb.com/cn/" target="_blank">zb.com</a></td>
+										<td><a href="https://www.zb.com/help/guides/1" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+									<tr>
+										<td><img src="images/aofex.png"></td>
+										<td><a href="https://aofex.app/" target="_blank">aofex.app</a></td>
+										<td><a href="https://aofex.zendesk.com/hc/zh-cn/sections/360004742313-%E6%96%B0%E6%89%8B%E5%BF%85%E8%AF%BB" target="_blank"><label class="pdiv" data-lang="p3">查看教程</label><label class="mdiv" data-lang="p2">教程</label></a></td>
+									</tr>
+								</table>
+							</div>
+							<p><strong data-lang="tip2">友情提示：</strong><span data-lang="tip3">若无法打开以上网站，可以使用神灯VPN[</span><a href="https://topbuyerapp.com/" target="_blank" data-lang="sd" style="color:#f4b204">神灯VPN网址</a><span data-lang="sd1">]或旋风加速器[</span><a data-lang="sd2" href="https://www.xfjiasu.com/" target="_blank" style="color: #F4B204">旋风加速器网址]</a><span data-lang="sd3">，即可登陆交易所</span></p>
+						</div>
+					</li>
+					<li class="wow flipInX" data-wow-delay="0.6s">
+						<div class="title">
+							<i>03</i>
+							<span>
+								<span data-lang="sd4">复制幸运哈希 USDT-TRC20 地址进行转账</span><br/>
+								<em data-lang="sd5">请经常关注刷新我们主页，获取最新交易地址。</em>
+							</span>
+						</div>
+						<div class="info">
+							<h4 data-lang="sd6">TRX 及 USDT-TRC20地址：</h4>
+							<p>TQqDgU35UtALZ6nzVrHMYYrZRnHB5tuMAq</p>
+							<button data-lang="sd7" data-clipboard-text="TQqDgU35UtALZ6nzVrHMYYrZRnHB5tuMAq" class="copyTrc20But" style="margin-top:10px">复制地址</button>
+													</div>
+					</li>
+					<li class="wow flipInX" data-wow-delay="0.9s">
+						<div class="title">
+							<i>04</i>
+							<span>
+								<span data-lang="sd8">登录波场官网查询区块哈希值</span><br/>
+								<em data-lang="sd9">您可在波场官网查询您的区块哈希值</em>
+							</span>
+						</div>
+						<div class="info">
+							<button data-lang="site" onclick="window.open('https://tronscan.io/');">登录波场官网</button>
+							<p><span data-lang="site1">您可在波场官网</span> <a href="https://tronscan.io/" target="_blank" style="color:#f4b204">https://tronscan.io/</a> <span data-lang="site2">上查询您的区块哈希值，</span><a href="tutorials2.html" data-lang="site3" target="_blank" style="color:#f4b204">点击查看教程</a>。</p>
+
+						</div>
+					</li>
+					<li class="wow flipInX" data-wow-delay="1.2s">
+						<div class="title">
+							<i>05</i>
+							<span>
+								<span data-lang="wow">恭喜您！</span><br/>
+								<em data-lang="wow1">若中奖，系统将在10秒内返奖1.98倍奖励到您的转账地址中</em>
+							</span>
+						</div>
+						<div class="info">
+							<div class="head" data-lang="wow1">若中奖，系统将在10秒内返奖1.98倍奖励到您的转账地址</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--为什么要选择-->
+	<a id="t3"></a>
+	<div class="whyContainer">
+		<div class="container">
+			<div class="whyDiv">
+				<h1 class="linearText wow fadeInUp" data-lang="wow2">为什么选择幸运哈希</h1>
+				<div class="blocks">
+					<div class="block b1 wow fadeInUp" data-wow-delay="0.3s">
+						<i></i>
+						<h4 data-lang="wow3">最公平</h4>
+						<ul>
+							<li data-lang="fair">不踢人，不掉线，不受任何干扰</li>
+							<li data-lang="fair1">区块哈希值随机生成，结果统一，无法更改，公开可查</li>
+
+						</ul>
+						<em data-lang="open">展开</em>
+					</div>
+					<div class="block b2 wow fadeInUp" data-wow-delay="0.6s">
+						<i></i>
+						<h4 data-lang="open1">最安全</h4>
+						<ul>
+							<li data-lang="fair2">完全匿名，不冻卡，不留任何个人信息</li>
+							<li data-lang="fair3">运营资金可见，不用担心没钱返奖</li>
+							<li data-lang="fair4">所有人转账记录可见，无法虚假宣传</li>
+
+						</ul>
+						<em data-lang="open">展开</em>
+					</div>
+					<div class="block b3 wow fadeInUp" data-wow-delay="0.9s">
+						<i></i>
+						<h4 data-lang="open1">最便捷</h4>
+						<ul>
+							<li data-lang="fair5">无需注册，无需预充值，无需申请提款</li>
+
+                                                                                                           						</ul>
+						<em data-lang="open">展开</em>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--常见问题-->
+	<a id="t4"></a>
+	<div class="faqWhyContainer">
+		<div class="container">
+			<div class="faqDiv">
+				<h1 class="linearText wow fadeInUp" data-lang="t4">常见问题</h1>
+				<div class="list">
+					<ul>
+						<li class="wow fadeInUp" data-lang="hash">什么是【区块哈希值】（Block hash）？</li>
+						<div class="wow fadeInUp">
+							<span data-lang="hash1">区块哈希值是一段数据的DNA，每个区块哈希值都是唯一的、随机的且不可破解的。</span>
+							<a href="https://baike.baidu.com/item/Hash/390310" target="_blank" data-lang="baidu">点击查看百度百科哈希值介绍</a>。
+						</div>
+						<li class="wow fadeInUp" data-lang="whathash">什么是区块链？</li>
+						<div class="wow fadeInUp">
+							<span data-lang="whathash1">
+								区块链从本质上讲，它是一个共享数据库，存储于其中的数据或信息。
+							具有不可伪造、全程留痕、可以追溯、公开透明、集体维护等特征。
+							</span>
+							<a href="https://baike.baidu.com/item/%E5%8C%BA%E5%9D%97%E9%93%BE/13465666" target="_blank" data-lang="baidu">点击查看百度百科区块链介绍</a>。
+						</div>
+						<li class="wow fadeInUp" data-lang="whathash2">中心化钱包？去中心化钱包？为什么中心化钱包无法查询转账？</li>
+						<div class="wow fadeInUp">
+							<a href="https://zhuanlan.zhihu.com/p/98203076" target="_blank" data-lang="whathash3">点击查看区块链钱包区别</a><br/>
+							<span data-lang="whathash4">
+								例如：您自己的钱包地址是A，您给地址E转入10个USDT，但您用交易哈希值去查询，只能查询到服务商随机某个账本地址B（或C或D等等）与E的转账。
+							同理E也无法得知这10个USDT是否是您转出的，因为E只能看见是账本地址B给他转入10个USDT。这就是为什么中心化钱包无法在区块链上查询真实转账信息。
+							</span>
+						</div>
+						<li class="wow fadeInUp" data-lang="whathash5">为什么我会连续中奖或不中奖？</li>
+						<div class="wow fadeInUp" >
+							<span data-lang="whathash6">首先连续多次不中奖的是小概率事件</span>
+							<a data-lang="whathashlink" href="https://baike.baidu.com/item/%E5%B0%8F%E6%A6%82%E7%8E%87%E4%BA%8B%E4%BB%B6/7339473" target="_blank">(小概率事件定义)</a>
+							<span data-lang="whathash7">
+								，其次中奖与不中奖是随机事件，随机事件的发生的频率会趋于一个稳定值。 在非迭代的情况下，事物出现的概率对每个人来讲是相等的，这个情况下，每个人都是公平的。 同时随机事件会遵大数定律（在试验不变的条件下，重复试验多次，随机事件的频率近似于它的概率大数定律定义），在转账频次不断增加的情况下，中奖与不中奖的概率会趋于一个稳定值。 所以请您继续转账，随着转账频次增加则中奖总概率会提升。
+							</span>
+						</div>
+						<li class="wow fadeInUp" data-lang="whathash8">为什么会延迟到帐？</li>
+						<div class="wow fadeInUp">
+							<a data-lang="whathashdoc" href="https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/articles/1_conception/why_blockchain_slow.html" target="_blank">点击查看区块链的速度困境：《贵在信任，慢得其所》</a>
+						</div>
+						<li class="wow fadeInUp" data-lang="whathash9">为什么转币时有那么多USDT的类型选项？我该选哪一个？</li>
+						<div class="wow fadeInUp">
+							<span data-lang="intr">全球有许多知名公链（</span><a href="https://www.tuoluocaijing.cn/article/detail-10030784.html" data-lang="intr1" target="_blank">点击查看全球知名公链简介</a>
+							<span data-lang="intr2">	）都支持进行USDT转账，而幸运哈希是基于波场TRC20技术。
+							所以幸运哈希的转账地址是属于USDT-TRC20， 您应该选择USDT-TRC20；
+							如果您选择了其他类型，幸运哈希则无法收到您的USDT，这会造成您和幸运哈希双方的损失。</span>
+						</div>
+						<li class="wow fadeInUp" data-lang="intr3">转币时转错地址或者选错币的类型，怎么办？是否还能找回？</li>
+						<div class="wow fadeInUp" >
+							<span data-lang="intr4">比如说您给我们转币时应该选择USDT-TRC20类型，但您选择了其他类型USDT-OMNI或者USDT-ERC20，那么就会出现丢币的情况，这种情况是无法找回的。</span>
+							<a href="https://www.feixiaohao.cc/news/8183926.html" data-lang="check" target="_blank">点击查看 如果转错币怎么办？</a>
+						</div>
+						<li class="wow fadeInUp" data-lang="other">其他问题</li>
+						<div class="wow fadeInUp" data-lang="call">如有任何疑问请联系我们</div>
+						<div class="wow fadeInUp onIcon emial">luckhash666@gmail.com</div>
+						<div class="wow fadeInUp onIcon iconDiv">
+							<a class="tg" href="https://t.me/LUCKHASH" target="_blank" data-lang="consult">Telegram咨询
+							<a class="fb" data-lang="consult1" href="https://www.facebook.com/Luckhash-%E5%B9%B8%E8%BF%90%E5%93%88%E5%B8%8C-101849418927573" target="_blank">Facebook咨询</a>
+						</div>
+						<div class="wow fadeInUp onIcon"><span data-lang="consult2">友情提示：若无法打开Telegram或Facebook，可以使用神灯VPN[</span><a href="https://topbuyerapp.com/" target="_blank" data-lang="consult3" style="color:#f4b204">神灯VPN网址</a><span data-lang="consult4">]或旋风加速器[</span><a href="https://www.xfjiasu.com/" data-lang="consult5" target="_blank" style="color: #F4B204">旋风加速器网址]</a><span data-lang="consult6">，即可登陆</span></p>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">$('#mainStyleSheet').attr('href','css/main.css?r+'+Math.random());</script>
+
+	<script type="text/javascript">
+		let useLanguage = getDefaultLang()
+
+		jQuery.i18n.properties({
+			name: "strings",
+			path: 'language/',
+			language: useLanguage,
+			cache: false,
+			async: true,
+			mode: 'map',
+			callback: function() {
+				for (let i in $.i18n.map) {
+
+					$('[data-lang="' + i + '"]').text($.i18n.map[i]);
+
+				}
+			}
+		});
+		if(document.body.offsetWidth>1023){
+			$('.ruleDiv .blocks ul li').hover(function(){
+				$('.ruleDiv .blocks ul li .title').width('');
+				$('.ruleDiv .blocks ul li').removeClass('show');
+				$('.ruleDiv .blocks ul li').not(this).find('.info').hide();
+				$('.ruleDiv .blocks ul li .title').width('150px');
+				$(this).find('.title').width('');
+				$(this).find('.info').show();
+				$(this).addClass('show');
+			},function(){});
+		}else{
+
+			function setRuleNum(num){
+				$('.ruleDiv .blocks ul').css('margin-left',(num*72.5*-1+72.5)+'vw');
+				$('.ruleDiv .blocks ul li').removeClass('show');
+				$('.ruleDiv .blocks ul li').eq(num-1).addClass('show');
+				$('.ruleDiv .nums span').removeClass('cur');
+				$('.ruleDiv .nums span[data-num='+num+']').addClass('cur');
+				curNums=num;
+			}
+
+			var curNums = 1;
+			$('.ruleDiv .nums span').click(function(event) {
+				var num = $(this).attr('data-num');
+				setRuleNum(num);
+			});
+
+			$('.ruleDiv .blocks').on("touchstart",function (e) {
+				var startX = e.originalEvent.targetTouches[0].pageX;
+				$(this).on('touchmove',function(e){
+					//arguments[0].preventDefault();
+				});
+				$(this).on('touchend', function (e) {
+					var endX=e.originalEvent.changedTouches[0].pageX;
+					e.stopPropagation();
+					if(endX-startX>30){ curNums=curNums-1; }
+					if(startX-endX>30){ curNums=curNums+1; }
+					if(curNums==0){ curNums=1; }
+					if(curNums>5){ curNums=5; }
+					setRuleNum(curNums);
+					$(this).off('touchmove touchend');
+				});
+			});
+
+		}
+
+
+		$('.whyDiv .blocks .block em').click(function(){
+			var ul = $(this).parent().find('ul');
+			if (ul.css('height')!='57px'){
+				ul.height('57px');
+				$(this).html('展开');
+			}else{
+				ul.height('auto');
+				$(this).html('收起');
+			}
+		});
+
+		var clipboardObj = new ClipboardJS('.copyTrc20But',{
+			target: function (obj){return obj;}
+		});
+        clipboardObj.on('success',function (e) {
+        	layer.msg('复制成功！');
+        });
+
+		var wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 30,
+			mobile: true
+		});
+		wow.init();
+
+		function getDefaultLang() {
+			var lang = navigator.language || navigator.userLanguage; //常规浏览器语言和IE浏览器
+			lang = lang.substr(0, 2); //截取lang前2位字符
+			return lang;
+		}
+	</script>
+
+</body>
+</html>
